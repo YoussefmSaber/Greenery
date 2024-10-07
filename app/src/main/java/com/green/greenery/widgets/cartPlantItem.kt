@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -28,6 +29,7 @@ import com.green.greenery.R
 import com.green.greenery.ui.theme.BrokenWhite
 import com.green.greenery.ui.theme.DarkGreen
 import com.green.greenery.ui.theme.PineGreen
+import com.green.greenery.ui.theme.fontFamily
 import compose.icons.TablerIcons
 import compose.icons.tablericons.Minus
 import compose.icons.tablericons.Plus
@@ -70,9 +72,20 @@ fun CartPlantItem() {
                     }
                     .padding(start = 16.dp)
             ) {
-                Text(text = "Snake Plants", color = PineGreen, fontSize = 20.sp)
+                Text(
+                    text = "Snake Plants",
+                    color = PineGreen,
+                    fontSize = 20.sp,
+                    fontFamily = fontFamily,
+                    fontWeight = FontWeight.SemiBold
+                )
                 Box(Modifier.height(8.dp))
-                Text(text = "$ 25.00", color = DarkGreen, fontSize = 16.sp)
+                Text(
+                    text = "$ 25.00", color = DarkGreen,
+                    fontSize = 16.sp,
+                    fontFamily = fontFamily,
+                    fontWeight = FontWeight.Bold
+                )
             }
             Card(
                 colors = CardColors(

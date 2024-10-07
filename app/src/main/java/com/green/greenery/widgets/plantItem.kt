@@ -1,22 +1,17 @@
 package com.green.greenery.widgets
 
-import android.provider.CalendarContract.Colors
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FavoriteBorder
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.Card
@@ -26,13 +21,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.scale
-import androidx.compose.ui.focus.FocusRequester.Companion.createRefs
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.LayoutModifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -41,8 +33,7 @@ import com.green.greenery.R
 import com.green.greenery.ui.theme.BrokenWhite
 import com.green.greenery.ui.theme.DarkGreen
 import com.green.greenery.ui.theme.Grey
-import com.green.greenery.ui.theme.PurpleGrey40
-import com.green.greenery.ui.theme.PurpleGrey80
+import com.green.greenery.ui.theme.fontFamily
 
 @Preview(showBackground = true)
 @Composable
@@ -100,7 +91,12 @@ fun PlantCard() {
                     .fillMaxWidth()
             ) {
                 Column(Modifier.padding(8.dp)) {
-                    Text(text = "Snake Plants", color = DarkGreen)
+                    Text(
+                        text = "Snake Plants",
+                        color = DarkGreen,
+                        fontFamily = fontFamily,
+                        fontWeight = FontWeight.SemiBold
+                    )
                     Box(modifier = Modifier.height(4.dp))
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
@@ -112,9 +108,17 @@ fun PlantCard() {
                             tint = Color(0xFFF88E24),
                             modifier = Modifier.width(16.dp)
                         )
-                        Text("4.5", fontSize = 10.sp, color = DarkGreen)
+                        Text(
+                            "4.5", fontSize = 10.sp, color = DarkGreen,
+                            fontFamily = fontFamily,
+                            fontWeight = FontWeight.SemiBold
+                        )
                         Box(modifier = Modifier.width(4.dp))
-                        Text("(100 reviews)", fontSize = 10.sp, color = Grey)
+                        Text(
+                            "(100 reviews)", fontSize = 10.sp, color = Grey,
+                            fontFamily = fontFamily,
+                            fontWeight = FontWeight.Normal
+                        )
                     }
                     Box(modifier = Modifier.height(8.dp))
                     Row(
@@ -122,7 +126,11 @@ fun PlantCard() {
                         modifier = Modifier.fillMaxWidth()
 
                     ) {
-                        Text("$ 25.00", fontSize = 16.sp, color = DarkGreen)
+                        Text(
+                            "$ 25.00", fontSize = 16.sp, color = DarkGreen,
+                            fontFamily = fontFamily,
+                            fontWeight = FontWeight.Bold
+                        )
                         Card(
                             shape = RoundedCornerShape(8.dp),
                             colors = CardColors(

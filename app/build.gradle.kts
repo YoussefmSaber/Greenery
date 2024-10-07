@@ -59,4 +59,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.composeIcons.tablerIcons)
+    implementation(libs.androidx.ui.text.google.fonts)
 }

@@ -23,7 +23,6 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
@@ -32,7 +31,6 @@ import com.green.greenery.ui.theme.BrokenWhite
 import com.green.greenery.ui.theme.DarkGreen
 import com.green.greenery.ui.theme.fontFamily
 
-@Preview(showBackground = true)
 @Composable
 fun PlantCard() {
     Card(

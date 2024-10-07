@@ -34,7 +34,6 @@ import compose.icons.TablerIcons
 import compose.icons.tablericons.Minus
 import compose.icons.tablericons.Plus
 
-@Preview(showBackground = true)
 @Composable
 fun CartPlantItem() {
     Card(

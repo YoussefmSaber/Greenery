@@ -60,4 +60,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.composeIcons.tablerIcons)
     implementation(libs.androidx.ui.text.google.fonts)
+    implementation(libs.animatedsmoothbottomnavigation.jetpackcompose)
+    implementation(libs.androidx.navigation.compose)
+    implementation (libs.androidx.material)
+
 }

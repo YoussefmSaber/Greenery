@@ -11,8 +11,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.navigation.compose.rememberNavController
+import com.green.greenery.navigation.RootNavigationGraph
 import com.green.greenery.ui.theme.GreeneryTheme
-import com.green.greenery.widgets.PlantCard
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,11 +21,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GreeneryTheme {
-                Scaffold(modifier = Modifier
-                    .fillMaxSize()
-                    ) { innerPadding ->
-                    Box(Modifier.padding(innerPadding).background(Color.Cyan)) {
-                        PlantCard()
+                Scaffold(
+                    modifier = Modifier
+                        .fillMaxSize()
+                ) { innerPadding ->
+                    Box(
+                        Modifier
+                            .padding(innerPadding)
+                            .background(Color.Cyan)) {
+                        RootNavigationGraph(navController = rememberNavController())
                     }
                 }
             }

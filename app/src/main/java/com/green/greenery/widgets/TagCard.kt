@@ -7,14 +7,12 @@ import androidx.compose.material3.CardColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.green.greenery.ui.theme.BrokenWhite
 import com.green.greenery.ui.theme.DarkGreen
 import com.green.greenery.ui.theme.fontFamily
 
-@Preview
 @Composable
 fun TagCard(tagName: String = "Indoor") {
     Card(

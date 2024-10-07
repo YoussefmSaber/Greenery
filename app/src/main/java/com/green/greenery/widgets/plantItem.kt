@@ -13,13 +13,11 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.rounded.Add
-import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardColors
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
@@ -32,7 +30,6 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import com.green.greenery.R
 import com.green.greenery.ui.theme.BrokenWhite
 import com.green.greenery.ui.theme.DarkGreen
-import com.green.greenery.ui.theme.Grey
 import com.green.greenery.ui.theme.fontFamily
 
 @Preview(showBackground = true)
@@ -98,28 +95,7 @@ fun PlantCard() {
                         fontWeight = FontWeight.SemiBold
                     )
                     Box(modifier = Modifier.height(4.dp))
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Star,
-                            contentDescription = "Rate Icon",
-                            tint = Color(0xFFF88E24),
-                            modifier = Modifier.width(16.dp)
-                        )
-                        Text(
-                            "4.5", fontSize = 10.sp, color = DarkGreen,
-                            fontFamily = fontFamily,
-                            fontWeight = FontWeight.SemiBold
-                        )
-                        Box(modifier = Modifier.width(4.dp))
-                        Text(
-                            "(100 reviews)", fontSize = 10.sp, color = Grey,
-                            fontFamily = fontFamily,
-                            fontWeight = FontWeight.Normal
-                        )
-                    }
+                    RateWidget()
                     Box(modifier = Modifier.height(8.dp))
                     Row(
                         horizontalArrangement = Arrangement.SpaceBetween,
